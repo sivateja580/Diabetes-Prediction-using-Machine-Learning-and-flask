@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction App</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">🩺 Diabetes Prediction System</h1>
+        <p class="subtitle">Enter the details below to check diabetes risk</p>
+
+        <form action="/predict" method="POST" class="form-box">
+
+            <label>
+                <input type="text" name="Pregnancies" placeholder="Pregnancies" required>
+            </label>
+            <label>
+                <input type="text" name="Glucose" placeholder="Glucose Level" required>
+            </label>
+            <label>
+                <input type="text" name="BloodPressure" placeholder="Blood Pressure" required>
+            </label>
+            <label>
+                <input type="text" name="SkinThickness" placeholder="Skin Thickness" required>
+            </label>
+            <label>
+                <input type="text" name="Insulin" placeholder="Insulin Level" required>
+            </label>
+            <label>
+                <input type="text" name="BMI" placeholder="BMI" required>
+            </label>
+            <label>
+                <input type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function" required>
+            </label>
+            <label>
+                <input type="text" name="Age" placeholder="Age" required>
+            </label>
+
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+
+</body>
+</html>
+

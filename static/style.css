@@ -1,0 +1,143 @@
+/* =====================================
+   GLOBAL PAGE STYLING
+===================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(-45deg, #6dd5fa, #2980b9, #2c3e50, #4ca1af);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Moving Gradient Background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =====================================
+   GLASS CARD CONTAINER
+===================================== */
+
+.container {
+    margin-top: 70px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    padding: 40px 55px;
+    display: inline-block;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.2s ease;
+}
+
+/* Smooth Page Fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================
+   HEADINGS
+===================================== */
+
+.title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #e6e6e6;
+}
+
+/* =====================================
+   FORM INPUT STYLING
+===================================== */
+
+.form-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 25px;
+}
+
+.form-box input {
+    padding: 12px;
+    width: 90%;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-box input:focus {
+    transform: scale(1.05);
+    background-color: #f0faff;
+}
+
+/* =====================================
+   BUTTON DESIGN
+===================================== */
+
+.btn {
+    grid-column: span 2;
+    background-color: #27ae60;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 12px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #2ecc71;
+    transform: scale(1.08);
+}
+
+/* =====================================
+   RESULT CARD (RED / GREEN)
+===================================== */
+
+.result-card {
+    margin-top: 30px;
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 26px;
+    animation: pop 1s ease;
+}
+
+/* Popup Animation */
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* GREEN (Not Diabetic) */
+.not-diabetic {
+    background-color: rgba(46, 204, 113, 0.25);
+    border: 2px solid #2ecc71;
+    box-shadow: 0 0 20px #2ecc71;
+}
+
+/* RED (Diabetic) */
+.diabetic {
+    background-color: rgba(231, 76, 60, 0.25);
+    border: 2px solid #e74c3c;
+    box-shadow: 0 0 20px #e74c3c;
+}

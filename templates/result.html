@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">🔍 Prediction Result</h1>
+
+        <!-- Dynamic card color (red/green) -->
+        <div class="result-card
+            {% if 'Not' in prediction_text %}not-diabetic{% else %}diabetic{% endif %}">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+
+        <a href="/" class="btn">🔙 Go Back</a>
+    </div>
+
+</body>
+</html>
